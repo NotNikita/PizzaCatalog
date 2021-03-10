@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Website</title>
+</head>
+
+<body>
+    <div class="nav-container">
+        <nav class="navbar">
+            <h1 id="navbar-logo">Lexus</h1>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-links">Home of Pizza</a></li>
+                <li><a href="/create.html" class="nav-links">Make Pizza</a></li>
+                <li><a href="#" class="nav-links">About Pizza</a></li>
+                <li><a href="#" class="nav-links">Contact</a></li>
+                <li><a href="#" class="nav-links nav-links-btn">Sign Up</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main">
+        <div class="main-container">
+            <div class="main-content">
+                <h1>GOOD EVENING, WELCOME TO LEXUS</h1>
+                <p>Brave. Different. Directional. Our design is instantly recognisable, never failing to stir emotions
+                    and
+                    inspire boundary-pushing new ideas.</p>
+                <button class="main-btn"><a href="#">Get Started</a></button>
+            </div>
+            <div class="main-img-container">
+                <img src="/images/electric.svg" alt="" id="main-img">
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+
+    <div class="modal" id="email-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-content-left">
+                <img src="images/pizza.svg" alt="" id="modal-img">
+            </div>
+            <div class="modal-content-right">
+                <form action="/" method="GET" class="modal-form" id="form">
+                    <h1>Get started with us Today! Create your account by filling out the information below.</h1>
+                    <div class="form-validation">
+                        <input type="text" class="modal-input" id="name" name="name" placeholder="Enter your name">
+                        <p>Error Message</p>
+                    </div>
+                    <div class="form-validation">
+                        <input type="email" class="modal-input" id="email" name="email" placeholder="Enter your email">
+                        <p>Error Message</p>
+                    </div>
+                    <div class="form-validation">
+                        <input type="password" class="modal-input" id="password" name="password"
+                            placeholder="Enter password">
+                        <p>Error Message</p>
+                    </div>
+                    <div class="form-validation">
+                        <input type="password" class="modal-input" id="password-confirm" name="password"
+                            placeholder="Confirm password">
+                        <p>Error Message</p>
+                    </div>
+                    <input type="submit" class="modal-input-btn" value="Sign Up">
+                    <span class="modal-input-login">Already have an accout? <a href='#'>Login here</a></span>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
