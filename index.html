@@ -8,13 +8,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
-    <title>Website</title>
+    <title>Pizza</title>
 </head>
 
 <body>
     <div class="nav-container">
         <nav class="navbar">
-            <h1 id="navbar-logo">Lexus</h1>
+            <span id="navbar-logo">Pizza DB</span>
             <div class="menu-toggle" id="mobile-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -26,27 +26,25 @@
                 <li><a href="#" class="nav-links">About Pizza</a></li>
                 <li><a href="#" class="nav-links">Contact</a></li>
                 <li><a href="#" class="nav-links nav-links-btn">Sign Up</a></li>
+
             </ul>
         </nav>
     </div>
 
-    <div class="main">
-        <div class="main-container">
-            <div class="main-content">
-                <h1>GOOD EVENING, WELCOME TO LEXUS</h1>
-                <p>Brave. Different. Directional. Our design is instantly recognisable, never failing to stir emotions
-                    and
-                    inspire boundary-pushing new ideas.</p>
-                <button class="main-btn"><a href="#">Get Started</a></button>
-            </div>
-            <div class="main-img-container">
-                <img src="/images/electric.svg" alt="" id="main-img">
-            </div>
-        </div>
-    </div>
+    <main class="main">
+        <section class="main-catalog">
+            <a href="#">
+                <div class="catalog-item">
+                    <div class="pizza-image">
+                        <img src="images/pizza_home.jpg" alt="Sample pizza img">
+                    </div>
+                    <span class="pizza-title">10 Cheese Pepperoni</span>
+                </div>
+            </a>
+        </section>
+    </main>
 
     <!-- Modal -->
-
     <div class="modal" id="email-modal">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
@@ -81,7 +79,22 @@
         </div>
     </div>
 
-    <script src="app.js"></script>
+    <footer>
+        <div class="footer-container">
+            <p class="copyright">Copyright @ 2021. Created by Nikita Yaskevich </p>
+            <div class="contacts">
+                <a href="https://www.instagram.com/realdonaldtrump/" class="vk-link">
+                    <img src="images/socials/ig.svg" alt="instagram" class="footer__socials-img"></a>
+                <a href="https://t.me/insomnia_f" class="instagram-link">
+                    <img src="images/socials/tg.svg" alt="telegram" class="footer__socials-img">
+                </a>
+                <a href="mailto:nikitabsuir@gmail.com" class="footer__socials-link">
+                    <img src="images/socials/mail.svg" alt="mail" class="footer__socials-img">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="./scripts/app.js"></script>
 </body>
 
 </html>

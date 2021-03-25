@@ -10,7 +10,7 @@ menu.addEventListener('click', () => {
 //------------------------------------Modal
 
 const modal = document.getElementById('email-modal');
-const openBtn = document.querySelector('.main-btn');
+const openBtn = document.querySelector('.nav-links-btn');
 const closeBtn = document.querySelector('.close-btn');
 
 //Click events
