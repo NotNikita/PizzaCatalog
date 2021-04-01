@@ -1,6 +1,55 @@
+@font-face {
+	font-family: 'Maison Neue Extended';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/MaisonNeueExt-Medium.eot');
+	/* IE9 Compat Modes */
+	src: local(''), url('../fonts/MaisonNeueExt-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('../fonts/MaisonNeueExt-Medium.woff2') format('woff2'), /* Super Modern Browsers */
+	url('../fonts/MaisonNeueExt-Medium.woff') format('woff'), /* Modern Browsers */
+	url('../fonts/MaisonNeueExt-Medium.ttf') format('truetype')/* Safari, Android, iOS */
+}
+
 main {
     background-color: var(--darkgray);
 }
+
+/* MARQUEE STYLES START */
+.main-marquee {
+    display: block;
+    width: 100%;
+}
+
+.marquee {
+    background-color: #0ba518;
+    color: white;
+    height: 3rem;
+}
+
+.marquee-item {
+    line-height: 1.5rem;
+    display: inline-block;
+    margin: 0.5rem 10%;
+    line-height: 1.5rem;
+}
+
+/* FIXME: костыль для центрирования картинки*/
+.marquee-img {
+    width: 1.5rem;
+    height: 1.5rem;
+    transform: translate(0px,0.2rem);
+    margin: 0 0.5rem;
+}
+
+.marquee-text {
+    text-transform: uppercase;
+    font-family: 'Maison Neue Extended', sans-serif;
+    font-style: normal;
+	font-weight: 400;
+    font-size: 1.4rem;
+}
+
+/* MARQUEE STYLES END */
 
 .main-catalog {
     display: grid;
