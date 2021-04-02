@@ -215,7 +215,7 @@ main {
     width: 300px;
     min-height: 240px;
     margin: 0 -10px;
-    background-image: url('/images/pizza_1.png') no-repeat;
+    background: url('../images/pizza_1.png') no-repeat;
     background-size: contain;
 }
 .line {
