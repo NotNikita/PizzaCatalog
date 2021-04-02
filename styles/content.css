@@ -1,5 +1,5 @@
 @font-face {
-	font-family: 'Maison Neue Extended';
+	font-family: 'Maison Neue Medium';
 	font-style: normal;
 	font-weight: 400;
 	src: url('../fonts/MaisonNeueExt-Medium.eot');
@@ -9,17 +9,37 @@
 	url('../fonts/MaisonNeueExt-Medium.woff') format('woff'), /* Modern Browsers */
 	url('../fonts/MaisonNeueExt-Medium.ttf') format('truetype')/* Safari, Android, iOS */
 }
-
-main {
-    background-color: var(--darkgray);
+@font-face {
+	font-family: 'Maison Neue Book';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/MaisonNeueExt-Book.eot');
+	/* IE9 Compat Modes */
+	src: local(''), url('../fonts/MaisonNeueExt-Book.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('../fonts/MaisonNeueExt-Book.woff2') format('woff2'), /* Super Modern Browsers */
+	url('../fonts/MaisonNeueExt-Book.woff') format('woff'), /* Modern Browsers */
+	url('../fonts/MaisonNeueExt-Book.ttf') format('truetype')/* Safari, Android, iOS */
+}
+@font-face {
+	font-family: 'Maison Neue Mono';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/MaisonNeueMono-Regular.ttf');
+	/* IE9 Compat Modes */
+	src: local(''), url('../fonts/MaisonNeueMono-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('../fonts/MaisonNeueMono-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+	url('../fonts/MaisonNeueMono-Regular.woff') format('woff'), /* Modern Browsers */
+	url('../fonts/MaisonNeueMono-Regular.ttf') format('truetype')/* Safari, Android, iOS */
 }
 
-/* MARQUEE STYLES START */
-.main-marquee {
-    display: block;
+main {
+    /*background-color: var(--darkgray);*/
+    background-color: #f6f6f6;
     width: 100%;
 }
 
+
+/* MARQUEE STYLES START */
 .marquee {
     background-color: #0ba518;
     color: white;
@@ -43,31 +63,59 @@ main {
 
 .marquee-text {
     text-transform: uppercase;
-    font-family: 'Maison Neue Extended', sans-serif;
+    font-family: 'Maison Neue Medium', sans-serif;
     font-style: normal;
-	font-weight: 400;
+	font-weight: 300;
     font-size: 1.4rem;
 }
 
 /* MARQUEE STYLES END */
 
+/* LABELS STYLES START */
+
+.main-labels{
+    padding-top: 1%;
+    text-align: center;
+	margin: 0 10%;
+}
+.main-labels h2{
+    font-family: 'Maison Neue Medium', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    height: 54px;
+    font-size: 3rem;
+    line-height: 54px;
+    color: #000;
+    margin-bottom: 5%;
+}
+.main-labels p{
+    font-family: 'Maison Neue Book', sans-serif;
+    color: #000;
+    font-stretch: 100%;
+    font-size: 1.2rem;
+    line-height: 36px;
+    margin: 0 0 3.75rem;
+}
+
+/* LABELS STYLES END */
+
 .main-catalog {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(auto-fit, 350px);
-    column-gap: 50px;
+    grid-template-columns: repeat(auto-fit, 25%); 
+    grid-template-rows: repeat(auto-fit, 480px);
+    column-gap: 3%;
+    height: 100%;
     row-gap: 25px;
-    height: 80vh;
-    padding: 3% 5%;
-    background-color: var(--darkgray);
+    padding: 3% 2%;
 }
-.main-catalog a {
+.pizza-card {
     text-decoration: none;
+    height: 360px;
 }
 .catalog-item {
-    height: 350px;
     background-color: #5e626b;
-    border-radius: 30px;
+    border-radius: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -97,3 +145,145 @@ main {
     font-size: 1.2em;
     color: white
 }
+
+/* PIZZA-ARTICLE STYLES START */
+.product-wrapper{
+    position: relative;
+    overflow: hidden;
+    width: 90%;
+    height: 100%;
+    transition: all .35s;
+}
+/* ANIMATED GREEN BLOCK DOWN*/
+.product-ingredients{
+    position: absolute;
+    margin: 0 -20px;
+    height: 75%;
+    bottom: -100%;
+    width: 100%;
+    padding: 1.4375rem 1.25rem;
+    border-radius: .625rem;
+    background-color: #04622d;
+    pointer-events: none;
+    transition: 0.6s;
+    transition-timing-function: cubic-bezier(.54,.03,.13,.94);
+}
+.product-wrapper:hover .product-ingredients{
+    transition: 0.6s;
+    transition-timing-function: cubic-bezier(.54,.03,.13,.94);
+    bottom: 0;
+}
+.product-wrapper:hover .button-white{
+    background-color: inherit;
+    color: #fff;
+}
+.product-wrapper:hover .button-green{
+    background-color: #fff;
+    color: #04622d;
+}
+/* ANIMATED GREEN BLOCK ABOVE*/
+
+
+.product-article {
+    z-index: 1;
+    width: 100%;
+    min-height: 470px;
+    border-radius: 0.675rem;
+    padding: 1.4375rem 1.25rem;
+    overflow: hidden;
+    position: relative;
+}
+.product-article::after {
+    z-index: -1;
+    width: 100%;
+    height: 75%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    border-radius: .625rem;
+    background-color: #fff;
+}
+.product-article a{
+    color: inherit;
+    text-decoration: none;
+}
+.product-link {
+    width: 100%;
+}
+.product-image {
+    width: 300px;
+    min-height: 240px;
+    margin: 0 -10px;
+    background: url('/images/pizza_1.png') no-repeat;
+    background-size: contain;
+}
+.line {
+    height: .25rem;
+    width: 100%;
+    transform-origin: bottom;
+}
+.bg-white {
+    background-color: #fff;
+}
+.product-title {
+    font-family: 'Maison Neue Book', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    color: #000;
+    margin: .875rem 0 .625rem;
+}
+.product-labels {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 1.5625rem;
+}
+.pizza-size{
+    font-family: 'Maison Neue Mono', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    display: flex;
+    justify-self: flex-start;
+}
+.pizza-price{
+    font-family: 'Maison Neue Mono', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    display: flex;
+    justify-self: flex-end;
+}
+.button {
+    position: relative;
+    padding: .8125rem 1.2rem;
+    border-radius: .3125rem;
+    transition: 0.6s;
+    background-color: transparent;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5;
+}
+.button a{
+    height: 80px;
+}
+.button-white {
+    z-index: 2;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    position: relative;
+    float: left;
+}
+.button-green {
+    z-index: 2;
+    background-color: rgb(4,98,45);
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    float: right;
+}
+/* PIZZA-ARTICLE STYLES END */
