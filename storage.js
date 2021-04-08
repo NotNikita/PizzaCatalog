@@ -16,16 +16,6 @@ class Storage {
         this.database = firebase.database();
     }
 
-    addCoffee(coffee) {
-        this.database.ref('coffees/').push({
-            name: coffee.name,
-            description: coffee.description,
-            createDate: coffee.createDate.toISOString().slice(0, 10),
-            addedBy: coffee.addedBy,
-            value: coffee.value,
-            ingredients: coffee.ingredients,
-        })
-    }
     addPizza(title, author, price, ingredients, image) {
         let uploadTask = firebase.storage().ref('Images/' + title + author + '.png').put(image);
         let ImgUrl;
@@ -52,7 +42,16 @@ class Storage {
     }
 
     async getCatalog() {
-        return (await this.database.ref('Pizza/').once('value')).val();
+        let arr = [];
+        await this.database.ref('Pizza/').on('value', function (snapshot) {
+            snapshot.forEach(function (childSnapshot) {
+                arr.push(childSnapshot.val());
+            });
+        });
+        return arr;
+    }
+    getDatabase(){
+        return this.database;
     }
 
     async getCatalogFromAuthor(author) {
@@ -66,4 +65,3 @@ class Storage {
 
 let pizzaStorage = new Storage();
 console.log('Database connected')
-console.log('Pizza Catalog:' + pizzaStorage.getCatalog())

@@ -35,7 +35,7 @@ const calculateOrder = () => {
     const startPrice = 300,
         ingredientsPrice = ingredients.length * 25;
 
-    totalAmount.innerHTML = `€${startPrice + ingredientsPrice}`;
+    totalAmount.innerHTML = `₽${startPrice + ingredientsPrice}`;
 };
 
 /* Alert for order */

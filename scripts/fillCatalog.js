@@ -1,12 +1,3 @@
-//------------------------------------Navigation Bar
-const menu = document.querySelector('#mobile-menu');
-const menuLinks = document.querySelector('.nav-menu');
-
-menu.addEventListener('click', () => {
-    menu.classList.toggle('is-active');
-    menuLinks.classList.toggle('active');
-})
-
 var firebaseConfig = {
     apiKey: "AIzaSyDosIYB0O-MRqMxEp8bEyyzWCowY41afn0",
     authDomain: "pizzadb-66739.firebaseapp.com",
@@ -17,7 +8,6 @@ var firebaseConfig = {
     databaseURL: "https://pizzadb-66739-default-rtdb.europe-west1.firebasedatabase.app/"
 };
 
-//------------------------------------Catalog articles
 function fillCatalog() {
     firebase.initializeApp(firebaseConfig);
     database = firebase.database();
@@ -74,7 +64,7 @@ function fillCatalog() {
             let pizzaChgLabelBtn = document.createElement("button");
             pizzaChgLabelBtn.classList.add('button');
             pizzaChgLabelBtn.classList.add('button-green');
-            pizzaChgLabelBtn.textContent = 'Green btn';
+            pizzaChgLabelBtn.textContent = 'Change label';
 
             let pizzaIngredientsDiv = document.createElement("div");
             pizzaIngredientsDiv.classList.add('product-ingredients');
