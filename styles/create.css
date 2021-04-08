@@ -65,6 +65,35 @@ button.typical-btn {
 .make-an-order {
   max-width: 258px;
 }
+/* PIZZA INPUTS OF NAME AND AUTHOR START*/
+.creator-inputs {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 30px 0;
+}
+.creator-inputs input{
+  border-radius: 7px;
+  background-color: #0B0C09;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  height: 50px;
+  justify-content: center;
+}
+.creator-pizza span {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 51px;
+  text-align: center;
+  margin: 0 25px 45px 25px;
+}
+
 .creator-pizza {
   justify-content: center;
   margin-bottom: 50px;
@@ -182,44 +211,8 @@ button.typical-btn {
 .creator-pizza .current-pizza .current-pizza-item.active {
   display: block;
 }
-.creator-pizza .current-pizza .current-pizza-item.testo {
-  background-image: url("../images/toppings/testo.png");
-  display: block;
-}
-.creator-pizza .current-pizza .current-pizza-item.osnova {
-  background-image: url("../images/toppings/osnova.png");
-  display: block;
-}
-.creator-pizza .current-pizza .current-pizza-item.vetchina {
-  background-image: url("../images/toppings/vetchina.png");
-}
-.creator-pizza .current-pizza .current-pizza-item.bekon {
-  background-image: url("../images/toppings/bekon.png");
-}
-.creator-pizza .current-pizza .current-pizza-item.kolbasa {
-  background-image: url("../images/toppings/kolbasa.png");
-}
-.creator-pizza .current-pizza .current-pizza-item.perec {
-  background-image: url("../images/toppings/perec.png");
-}
-.creator-pizza .current-pizza .current-pizza-item.tomat {
-  background-image: url("../images/toppings/tomat.png");
-}
-.creator-pizza .current-pizza .current-pizza-item.olives {
-  background-image: url("../images/toppings/olives.png");
-}
-.creator-pizza .current-pizza .current-pizza-item.shampinion {
-  background-image: url("../images/toppings/shampinion.png");
-}
-.creator-pizza .current-pizza .current-pizza-item.chiken {
-  background-image: url("../images/toppings/chiken.png");
-}
-.creator-pizza .current-pizza .current-pizza-item.ananas {
-  background-image: url("../images/toppings/ananas.png");
-}
-.creator-pizza .current-pizza .current-pizza-item.mozzarella {
-  background-image: url("../images/toppings/mozzarella.png");
-}
+
+
 .option-delivery {
   margin-bottom: 130px;
 }
