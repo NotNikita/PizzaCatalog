@@ -17,12 +17,15 @@ class Storage {
     }
 
     addPizza(title, author, price, ingredients, image) {
+        // Connecting to storage and uploading pizza's image
         let uploadTask = firebase.storage().ref('Images/' + title + author + '.png').put(image);
         let ImgUrl;
-        // console.log('name: ' + title + '\nauthor: ' + author + ' and price: ' + price + ingredients)
 
+        let loadingModel = document.querySelector('.loader-wrapper');
         uploadTask.on('state_changed', function (snapshot) {
             // Observe state change events such as progress, pause, and resume
+            // Make loading model appear
+            loadingModel.style.display = 'block';
 
         }, function (error) {
             alert('error on saving the image');
@@ -38,28 +41,8 @@ class Storage {
                     ImageLink: ImgUrl
                 })
             })
+            loadingModel.style.display = 'none';
         });
-    }
-
-    async getCatalog() {
-        let arr = [];
-        await this.database.ref('Pizza/').on('value', function (snapshot) {
-            snapshot.forEach(function (childSnapshot) {
-                arr.push(childSnapshot.val());
-            });
-        });
-        return arr;
-    }
-    getDatabase(){
-        return this.database;
-    }
-
-    async getCatalogFromAuthor(author) {
-        return (await this.database.ref('Pizza/' + author).once('value')).val();
-    }
-
-    async getPizza(id) {
-        return (await this.database.ref('Pizza/' + id).once('value')).val();
     }
 }
 

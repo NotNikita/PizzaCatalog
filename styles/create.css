@@ -1,3 +1,5 @@
+@import url('loading.css');
+
 * {
   margin: 0px;
   padding: 0px;
@@ -15,6 +17,7 @@ html, body {
   font-size: 1rem;
   line-height: 1.5rem;
   text-align: left;
+  overflow-x: hidden;
 }
 h1 {
   font-style: normal;

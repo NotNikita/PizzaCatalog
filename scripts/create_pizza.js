@@ -23,11 +23,9 @@ const addIngredients = checkboxes => {
         })
     }
 }
-
 addIngredients(inputsCheckbox);
 
 /* Calculate order */
-
 const calculateOrder = () => {
     const ingredients = document.querySelectorAll('.container-custom-checkbox.active'),
         drinks = document.querySelectorAll('.select-drink-item.active');
@@ -37,25 +35,6 @@ const calculateOrder = () => {
 
     totalAmount.innerHTML = `₽${startPrice + ingredientsPrice}`;
 };
-
-/* Alert for order */
-
-const prepareAlertContent = () => {
-
-    const addedIngredients = document.querySelectorAll('.container-custom-checkbox.active');
-
-    let ingredientsList = [];
-    if (addedIngredients) {
-        for (let ingredient of addedIngredients) {
-            ingredientsList.push(ingredient.innerText);
-        }
-    };
-
-    const totalIngredients = ingredientsList.join(', ') || 'нет ингредиентов';
-    const totalText = `Вы заказали пиццу, с ингредиентами: '${totalIngredients}', с Вас ${totalAmount.innerHTML}`;
-
-    alert(totalText);
-}
 
 const addPizzaToDb = (image) => {
     // Getting all ingredients and price
@@ -87,10 +66,4 @@ orderBtn.addEventListener('click', () => {
     canvas.toBlob(blob => {
         addPizzaToDb(blob);
     })
-    // FOR DOWNLOADING YOUR CUSTOM PIZZA
-    // var link = document.createElement('a');
-    // link.download = 'PizzaPhoto.png';
-    // link.href = canvas.toDataURL();
-    // link.click();
-    // link.delete;
 });

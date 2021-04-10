@@ -34,7 +34,6 @@ function fillCatalog() {
             img.classList.add('product-image');
             img.src = catalogJSONarray[pizza].ImageLink;
             pizzaImageDiv.appendChild(img);
-            //pizzaImageDiv.style.backgroundImage = catalogJSONarray[pizza].ImageLink;
 
             let pizzaLineDiv = document.createElement("div");
             pizzaLineDiv.classList.add('line');
