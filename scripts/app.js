@@ -18,6 +18,7 @@ var firebaseConfig = {
 };
 
 //------------------------------------Catalog articles
+
 function fillCatalog() {
     firebase.initializeApp(firebaseConfig);
     database = firebase.database();
